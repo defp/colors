@@ -3,8 +3,8 @@ defmodule Colors.Mixfile do
 
   def project do
     [app: :colors,
-     version: "1.0.0",
-     elixir: "~> 0.14.2 or ~> 0.14.3-dev",
+     version: "1.0.1",
+     elixir: ">= 1.0.0",
      description: description,
      source_url: "https://github.com/lidashuang/colors",
      package: package,
