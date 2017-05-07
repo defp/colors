@@ -39,7 +39,7 @@ defmodule Colors do
       end
   end
 
-  def random(type, str) do
+  def random(str, type) do
       random_element = type |> list |> Enum.random
       apply(__MODULE__, random_element, [str])
   end

@@ -6,9 +6,14 @@ defmodule ColorsTest do
   end
 
   test "random" do
-    random_color = Colors.random(:color, "blue_skies")
+    random_color = Colors.random("blue_skies", :color)
     # IO.puts random_color
     assert String.contains?(random_color, "blue_skies")
+  end
+
+  test "random pipe" do
+    random_color = "random pipe" |> Colors.random(:color)
+    assert String.contains?(random_color, "random pipe")
   end
 
   test "list" do
