@@ -34,17 +34,17 @@ defmodule Colors do
   ]
 
   for {name, before, after_, _type} <- @colors do
-      def unquote(name)(str) do
-        unquote(before) <> str <> unquote(after_)
-      end
+    def unquote(name)(str) do
+      unquote(before) <> str <> unquote(after_)
+    end
   end
 
   def random(str, type) do
-      random_element = type |> list |> Enum.random
-      apply(__MODULE__, random_element, [str])
+    random_element = type |> list |> Enum.random
+    apply(__MODULE__, random_element, [str])
   end
 
   def list(type) do
-      for {name, _, _, ^type} <- @colors, do: name
+    for {name, _, _, ^type} <- @colors, do: name
   end
 end
