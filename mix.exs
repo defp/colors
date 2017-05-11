@@ -2,13 +2,16 @@ defmodule Colors.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :colors,
-     version: "1.0.1",
-     elixir: ">= 1.0.0",
-     description: description(),
-     source_url: "https://github.com/lidashuang/colors",
-     package: package(),
-     deps: deps()
+    [
+      app: :colors,
+      version: "1.1.1",
+      elixir: ">= 1.0.0",
+      description: description(),
+      source_url: "https://github.com/lidashuang/colors",
+      homepage_url: "https://github.com/lidashuang/colors",
+      docs: [main: "Colors", extras: ["README.md"]],
+      package: package(),
+      deps: deps()
    ]
   end
 
@@ -20,7 +23,7 @@ defmodule Colors.Mixfile do
   end
 
   defp deps do
-    []
+    [{:ex_doc, "~> 0.14", only: :dev, runtime: false}]
   end
 
   defp description do
@@ -28,8 +31,11 @@ defmodule Colors.Mixfile do
   end
 
   defp package do
-    [contributors: ["lidashuang"],
-     licenses: ["Apache 2.0"],
-     links: %{"Github" => "https://github.com/lidashuang/colors"}]
+    [
+      contributors: ["lidashuang", "vim-zz"],
+      maintainers: ["lidashuang"],
+      licenses: ["Apache 2.0"],
+      links: %{"Github" => "https://github.com/lidashuang/colors"}
+    ]
   end
 end
