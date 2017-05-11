@@ -5,10 +5,10 @@ defmodule Colors.Mixfile do
     [app: :colors,
      version: "1.0.1",
      elixir: ">= 1.0.0",
-     description: description,
+     description: description(),
      source_url: "https://github.com/lidashuang/colors",
-     package: package,
-     deps: deps
+     package: package(),
+     deps: deps()
    ]
   end
 
